@@ -47,6 +47,7 @@ const database = knex({
     user: 'smart_brain_user',
     password: 'X7YsledUSjARZAS6KdnMsh92AWjxHrqa',
     database: 'smart_brain_r7sn',
+    ssl: { rejectUnauthorized: false }
   },
 });
 
