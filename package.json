@@ -1,0 +1,31 @@
+{
+  "name": "smart-brain-application-backend",
+  "version": "1.0.0",
+  "description": "It contains the backend server for Smart Brain Application.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "npm run tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "keywords": [
+    "smart-brain-backend"
+  ],
+  "author": "Syed Haider Raza",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "clarifai": "^2.9.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "knex": "^3.1.0",
+    "pg": "^8.16.0"
+  }
+}
