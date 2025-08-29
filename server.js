@@ -38,15 +38,26 @@ app.use(cors());
 //     ]
 // };
 
+// Using Environment Variables
+const DB_HOST = process.env.SMART_BRAIN_DB_HOST;
+const DB_USER = process.env.SMART_BRAIN_DB_USERNAME;
+const DB_PASSWORD = process.env.SMART_BRAIN_DB_PASSWORD;
+const DB_NAME = process.env.SMART_BRAIN_DB_NAME;
+
+console.log("DB URL is: ", DB_HOST);
+console.log("DB User is: ", DB_USER);
+console.log("DB Password is: ", DB_PASSWORD);
+console.log("DB Name is: ", DB_NAME);
+
 // Initializing the database connection using knex.js
 const database = knex({
   client: 'pg',
   connection: {
-    host: 'dpg-d1t5v4bipnbc73860a5g-a.oregon-postgres.render.com',
+    host: DB_HOST,
     port: 5432,
-    user: 'smart_brain_user',
-    password: 'X7YsledUSjARZAS6KdnMsh92AWjxHrqa',
-    database: 'smart_brain_r7sn',
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_NAME,
     ssl: { rejectUnauthorized: false }
   },
 });
